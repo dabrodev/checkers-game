@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Checkers</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Unica+One&display=swap"
+    />
+    <link href="./styles.css" rel="stylesheet" />
+  </head>
+  <body>
+    <main>
+      <aside>
+        <h1>warcaby</h1>
+        <div class="info-box">
+          <p>ruch</p>
+          <img src="./assets/piece-white.svg" alt="Current player turn" />
+        </div>
+        <div class="info-box">
+          <p>wynik</p>
+          <div class="score">
+            <img src="./assets/piece-white.svg" alt="White player score" />
+            <p>
+              <span id="white-score">0</span>
+              :
+              <span id="red-score">0</span>
+            </p>
+            <img src="./assets/piece-red.svg" alt="Red player score" />
+          </div>
+        </div>
+      </aside>
+      <div id="app"></div>
+    </main>
+
+    <script type="module" src="./js/app.js"></script>
+  </body>
+</html>

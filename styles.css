@@ -1,0 +1,137 @@
+html {
+  font-family: "Unica One", sans-serif;
+  background: #f6f6f6;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+main {
+  max-width: 1440px;
+  margin: 3% auto;
+  display: flex;
+  padding: 0 24px;
+  justify-content: space-between;
+}
+
+aside h1 {
+  color: #1c1c1c;
+  font-family:
+    Unica One,
+    sans-serif;
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-bottom: 20px;
+}
+
+aside p {
+  color: #1c1c1c;
+  font-family:
+    Unica One,
+    sans-serif;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.info-box {
+  display: flex;
+  width: 348px;
+  padding: 20px;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  margin-top: 8px;
+}
+
+.info-box img {
+  width: 32px;
+  height: 32px;
+}
+
+.score {
+  display: flex;
+  align-items: center;
+}
+
+.score p {
+  margin: 0 16px;
+}
+
+#board {
+  display: grid;
+  grid-template-columns: repeat(10, 70px); /* Updated for 10 columns */
+  width: 732px; /* Updated width for 10 squares */
+  height: 732px; /* Updated height for 10 squares */
+  border: 16px solid #1c1c1c;
+}
+
+#board div {
+  width: 70px;
+  height: 70px;
+}
+
+/* Alternating pattern for odd rows */
+#board div:nth-child(odd):nth-child(-n + 10),
+#board div:nth-child(even):nth-child(n + 11):nth-child(-n + 20),
+#board div:nth-child(odd):nth-child(n + 21):nth-child(-n + 30),
+#board div:nth-child(even):nth-child(n + 31):nth-child(-n + 40),
+#board div:nth-child(odd):nth-child(n + 41):nth-child(-n + 50),
+#board div:nth-child(even):nth-child(n + 51):nth-child(-n + 60),
+#board div:nth-child(odd):nth-child(n + 61):nth-child(-n + 70),
+#board div:nth-child(even):nth-child(n + 71):nth-child(-n + 80),
+#board div:nth-child(odd):nth-child(n + 81):nth-child(-n + 90),
+#board div:nth-child(even):nth-child(n + 91):nth-child(-n + 100) {
+  background-color: #e7c673;
+}
+
+/* Alternating pattern for even rows */
+#board div:nth-child(even):nth-child(-n + 10),
+#board div:nth-child(odd):nth-child(n + 11):nth-child(-n + 20),
+#board div:nth-child(even):nth-child(n + 21):nth-child(-n + 30),
+#board div:nth-child(odd):nth-child(n + 31):nth-child(-n + 40),
+#board div:nth-child(even):nth-child(n + 41):nth-child(-n + 50),
+#board div:nth-child(odd):nth-child(n + 51):nth-child(-n + 60),
+#board div:nth-child(even):nth-child(n + 61):nth-child(-n + 70),
+#board div:nth-child(odd):nth-child(n + 71):nth-child(-n + 80),
+#board div:nth-child(even):nth-child(n + 81):nth-child(-n + 90),
+#board div:nth-child(odd):nth-child(n + 91):nth-child(-n + 100) {
+  background-color: #e1ab1f;
+}
+
+.active-field {
+  border: 2px solid #1c1c1c;
+}
+
+.piece__red {
+  background: url("./assets/piece-red.svg") no-repeat center;
+}
+
+.piece__white {
+  background: url("./assets/piece-white.svg") no-repeat center;
+}
+
+.king__red {
+  background: url("./assets/piece-red-king.svg") no-repeat center;
+}
+
+.king__white {
+  background: url("./assets/piece-white-king.svg") no-repeat center;
+}
+
+.cell,
+.king__red,
+.king__white,
+.piece__red,
+.piece__white {
+  width: 70px;
+  height: 70px;
+  display: inline-block;
+  background-size: contain;
+}
